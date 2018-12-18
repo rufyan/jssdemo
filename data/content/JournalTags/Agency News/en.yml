@@ -1,0 +1,7 @@
+id: journal-tag-agency-news
+displayName: Agency News
+# Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
+template: JournalTag
+fields:
+  text: Agency News
+  dataTag: agency-news

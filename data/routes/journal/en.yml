@@ -1,0 +1,42 @@
+fields:
+  pageTitle: Journal  Guerrilla
+placeholders:
+  jss-main:
+  - componentName: ContentBlock
+    fields:
+      content: |
+        <section class="header-color">
+          <div class="layout-news-index intro">
+          <header>
+          <h1>Journal</h1>
+          <div class="filter-holder">
+          <div class="desktop-only">
+          <span>Filter by:</span>
+          <a href="javascript:void(0)" class="clear-filters state-active">Show All</a><a href="#" data-tag="agency-news">agency news</a><a href="#" data-tag="client-news">client news</a><a href="#" data-tag="our-people">our people</a><a href="#" data-tag="technology">technology</a></div>
+          <section class="style-select"><select><option value="-1">Filter by:</option><option value="agency-news">agency news</option><option value="client-news">client news</option><option value="our-people">our people</option><option value="technology">technology</option></select></section></div>
+          <div class="subscribe">
+          <span>For very occasional email updates, <a href="#" class="em-dash-underline with-arrow subscribe-link">subscribe</a></span>
+          </div>
+          <ul class="social">
+          <li>share this:</li>
+          <li><a class="with-arrow" href="https://www.facebook.com/guerrilla.com.au/?fref=photo" target="_blank">Facebook</a></li>
+          <li><a class="with-arrow" href="https://www.instagram.com/guerrilla.com.au/" target="_blank">Instagram</a></li>
+          <li><a class="with-arrow" href="https://www.linkedin.com/company/guerrilla-digital" target="_blank">LinkedIn</a></li>
+          </ul>
+          </header>
+          </div>
+        </section>
+  - componentName: JournalTagCollection
+    fields:
+      tags:
+      - id: journal-tag-agency-news
+  - componentName: JournalCard
+    fields:
+      heading: Journal here
+  - componentName: HtmlContent
+    fields:
+      content: |
+        <div>test</div>
+      classname: test-class      
+  jss-footer:
+  - componentName: ContentBlock

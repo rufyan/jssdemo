@@ -1,0 +1,49 @@
+query JournalCardQuery( $contextItem: String!) {
+  # Context/route item query
+  # $contextItem will always be set to the ID of the current context item (the route item)
+  # (as long as the GraphQLData helper is used)
+  contextItem: item(path: $contextItem) {
+    id
+    # Get the page title from the app route template
+    ...on AppRoute {
+      pageTitle {
+        value
+      }
+    }
+    parent{
+    	url
+      parent{
+        url
+      }
+    }
+    # List the children of the current route
+    children(requirePresentation: true) {
+      id
+      # typing fragments can be used anywhere!
+      # so in this case, we're grabbing the 'pageTitle'
+      # field on all child route items.
+      ...on AppRoute {
+        pageTitle {
+          value
+        }
+      }
+      url(options: { disableLanguageEmbedding: true })
+      children{
+        id
+        children {
+          id
+          ... on JournalArticle {
+            id
+          heading {
+            value
+          }
+          heroImage{
+              src
+          }
+          tag{value}
+        }
+        }
+      }
+    }
+  }
+}

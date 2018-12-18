@@ -1,0 +1,18 @@
+fields:
+  pageTitle: Project | VGC | Guerrilla
+placeholders:
+  jss-main:
+  - componentName: ProjectDetail
+    fields:
+      heading: Holidata — Transforming tourism data into personalised and contextual user journeys supported by user-generated content.
+      heroImage:
+        src: /data/media/img/IMG_3629-edit.jpg
+        alt: Holidata
+      content: |
+        <h2>2017 was a big one for Guerrilla — after an impressive year of local and global recognition, massive projects and many new partnerships, we downed tools for a short break over the holiday season. Fast-forward some festive <i>chin-chins, </i>a few competitive pitches later, and we’ve found ourselves heading for another phenomenal year!</h2>
+        <p>Among other exciting news, yet to be revealed, it’s a great privilege to announce that one of Australia’s largest non-profit health and community service providers, <a href="http://unitingcareqld.com.au">UnitingCare Queensland</a> (UCQ), has selected Guerrilla as its digital CX agency partner.</p>
+        <p>Following a lengthy tender and pitch process to win the account, we’re delighted to be working with UCQ across their house of brands which includes UnitingCare Queensland, Blue Care, Lifeline and a range of others.</p>
+        <p>Our initial engagement includes projects for BlueCare and the parent brand, UnitingCare Queensland. With work for both brands expected to roll-out this year, we’ll be delivering re-imagined brand experiences through several core business areas.</p>
+        <pre>We’re excited to partner with UCQ to help deliver an improved, customer-centred experience to thousands of diverse people who rely on UCQ every day.</pre>
+        <p>With our commitment to delivering proven effectiveness to non-profit organisations, it’s a particular thrill to add the UCQ to our client list.</p>
+        <p>Congratulations to the team for kicking-off 2018 on such a high note. We surely have an exciting year ahead!</p>

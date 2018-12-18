@@ -8,7 +8,8 @@ import Helmet from 'react-helmet';
 // without needing extra CSS in the sample app. Remove it in package.json as well if it's removed here.
 import 'bootstrap/dist/css/bootstrap.css';
 import './assets/app.css';
-import logo from './assets/sc_logo.png';
+
+import logo from './assets/guerrilla-logo-dark.svg';
 
 /*
   APP LAYOUT
@@ -21,29 +22,27 @@ import logo from './assets/sc_logo.png';
 // This is boilerplate navigation for sample purposes. Most apps should throw this away and use their own navigation implementation.
 // Most apps may also wish to use GraphQL for their navigation construction; this sample does not simply to support disconnected mode.
 let Navigation = ({ t, i18n }) => (
-  <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom">
-    <h5 className="my-0 mr-md-auto font-weight-normal">
-      <NavLink to="/" className="text-dark">
-        <img src={logo} alt="Sitecore" />
+  <nav className="component main component-initialised nav-down" id="nav">
+      <NavLink to="/" className="text-light">
+        <img src={logo} alt="Guerrilla" className="logo" />
       </NavLink>
-    </h5>
-    <nav className="my-2 my-md-0 mr-md-3">
-      <a
-        className="p-2 text-dark"
-        href="https://jss.sitecore.net"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {t('Documentation')}
-      </a>
-      <NavLink to="/styleguide" className="p-2 text-dark">
-        {t('Styleguide')}
+    
+      <ul className="menu" id="menu-primary-menu">
+        <li>
+      <NavLink to="/about-us" className="p-2 text-dark">
+        {t('Us')}
       </NavLink>
-      <NavLink to="/graphql" className="p-2 text-dark">
-        {t('GraphQL')}
+      </li><li>
+      <NavLink to="/journal" className="p-2 text-dark">
+        {t('Journal')}
       </NavLink>
+      </li><li>
+      <NavLink to="/connect" className="p-2 text-dark">
+        {t('Connect')}
+      </NavLink>
+      </li>
+      </ul>
     </nav>
-  </div>
 );
 
 // inject dictionary props (`t`) into navigation so we can translate it
@@ -63,9 +62,14 @@ const Layout = ({ route }) => (
     <Navigation />
 
     {/* root placeholder for the app, which we add components to using route data */}
-    <div className="container">
+    <main>
+      <section className="full overflow">
       <Placeholder name="jss-main" rendering={route} />
-    </div>
+      </section>
+    </main>
+    <footer>
+      <Placeholder name="jss-footer" rendering={route} />
+    </footer>
   </React.Fragment>
 );
 
