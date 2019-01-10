@@ -30,13 +30,10 @@ placeholders:
     fields:
       tags:
       - id: journal-tag-agency-news
-  - componentName: JournalCard
-    fields:
-      heading: Journal here
   - componentName: HtmlContent
     fields:
       content: |
-        <div>test</div>
+        <div>test it</div>
       classname: test-class      
   jss-footer:
   - componentName: ContentBlock

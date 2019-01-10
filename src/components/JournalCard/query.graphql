@@ -29,9 +29,7 @@ query JournalCardQuery( $contextItem: String!) {
       }
       url(options: { disableLanguageEmbedding: true })
       children{
-        id
         children {
-          id
           ... on JournalArticle {
             id
           heading {
@@ -41,6 +39,18 @@ query JournalCardQuery( $contextItem: String!) {
               src
           }
           tag{value}
+        	tagList{
+            targetItems{
+              ... on JournalTag{
+              text {
+                value
+              }
+              dataTag{
+                value
+                }
+              }
+            }
+          }
         }
         }
       }

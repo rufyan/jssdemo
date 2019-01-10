@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore-jss-manifest';
+import packageJson from '../../../package.json';
 
 /**
  * Adds the Journal component to the disconnected manifest.
@@ -18,6 +19,10 @@ export default function(manifest) {
       { name: 'socialFb', type: CommonFieldTypes.GeneralLink },
       { name: 'socialTw', type: CommonFieldTypes.GeneralLink },
       { name: 'socialLi', type: CommonFieldTypes.GeneralLink },
+      { name: 'tagList', type: CommonFieldTypes.ContentList,         
+        source: `dataSource=/sitecore/content/${
+        packageJson.config.appName
+      }/Content/JournalTags`, }
     ],
     /*
     If the component implementation uses <Placeholder> or withPlaceholder to expose a placeholder,

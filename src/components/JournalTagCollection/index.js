@@ -4,22 +4,28 @@ const JournalTagCollection = (props) => {
   const journalTagCollection = props.fields.tags;
 
   return (  
-    <div className="filter-">					
+    <section className="header-color layout-journal-index">
+    <div className="layout-news-index intro">
+      <header>
+        <h1>Journal</h1>
+          <div className="filter-holder">					
       <div className="desktop-only">
         <span>Filter by:</span>
-        <span className="clear-filters state-active">Show All</span>
+        <a className="clear-filters state-active">Show All</a>
         {journalTagCollection &&
           journalTagCollection.map((item, index) => (
-            <div key={`journaltag-${index}`} data-tag={item.fields.dataTag.value} className="journal-tag"
+            <a key={`journaltag-${index}`} data-tag={item.fields.dataTag.value} className="journal-tag"
             onClick={() => ({filtertags: item.fields.dataTag.value})}
-
             >
               {item.fields.text.value}
-            </div>
+            </a>
           ))
         }
       </div>
     </div>
+    </header>
+    </div>
+    </section>
   );
 };
 export default JournalTagCollection;

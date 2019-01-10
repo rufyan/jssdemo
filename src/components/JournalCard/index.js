@@ -21,7 +21,7 @@ return (
           {child.children[0].children.map((child3) => (
             <article key={child.id}>
                 <div key={child3.id}>
-                  <span>— <Text field={child3.tag}/> —</span>
+                  {child3.tagList.targetItems.map((tag) => (<span>— {tag.text.value}  —</span>))}
                   <h1>
                     <RouterLink to={child.url} className="with-arrow">
                       {child.pageTitle.value}
@@ -38,10 +38,6 @@ return (
       ))}
     </section>
   )}
-
-{/* <pre>
-{JSON.stringify(props.sitecoreContext, null, 2)}
-</pre> */}
   </section>
 </main>
 );
